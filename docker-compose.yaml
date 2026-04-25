@@ -1,0 +1,15 @@
+services:
+  conditionalDev:
+    image: devapp:latest
+    restart: "no"
+    ports:
+      - "8080:8080"
+    labels:
+      amplicode.image: springboot
+  conditionalProd:
+    image: prodapp:latest
+    restart: "no"
+    ports:
+      - "8081:8081"
+    labels:
+      amplicode.image: springboot

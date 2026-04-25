@@ -14,7 +14,7 @@ public class JavaConfig {
         return new DevProfile();
     }
     @Bean
-    @ConditionalOnProperty(name = "netology.profile.dev = true", havingValue = "false", matchIfMissing = true)
+    @ConditionalOnProperty(name = "netology.profile.dev", havingValue = "false", matchIfMissing = true)
     public SystemProfile prodProfile(){
         return new ProductionProfile();
     }
